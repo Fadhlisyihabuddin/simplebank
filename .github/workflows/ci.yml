@@ -37,6 +37,12 @@ jobs:
         go-version: '1.21.4'
     
     - name: Run Migration
+      run: |
+        curl -L https://github.com/golang-migrate/migrate/releases/download/v4.17.0/migrate.darwin-amd64.tar.gz | tar xvz
+        sudo mv migrate.darwin-amd64.tar.gz /usr/bin/
+        which migrate
+    
+    - name: Run Migration
       run: make migrateup
 
     - name: Test
