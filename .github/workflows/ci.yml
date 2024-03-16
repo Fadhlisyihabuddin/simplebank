@@ -40,7 +40,7 @@ jobs:
     
     - name: Run Migration
       run: |
-        curl -LO https://github.com/golang-migrate/migrate/releases/download/v4.17.0/migrate.darwin-amd64.tar.gz
+        curl -L https://github.com/golang-migrate/migrate/releases/download/v4.17.0/migrate.darwin-amd64.tar.gz
         sudo mv migrate.darwin-amd64.tar.gz /usr/bin/migrate
         which migrate
     
